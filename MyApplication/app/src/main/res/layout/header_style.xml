@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="80dp">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:text="@string/header_name"
+    android:background="#114218"
+    android:textAlignment="center"
+    android:gravity="center"
+    android:id="@+id/headerT"
+    android:textColor="#ffffffff"
+    android:textSize="20sp"
+    />
+</LinearLayout>

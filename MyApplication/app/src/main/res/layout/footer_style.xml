@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="#881177">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text= "@string/footer_name"
+        android:textAlignment="center"
+        android:id="@+id/footerT"
+        android:textColor="#ffffffff"
+        android:textSize="20sp"
+        android:gravity="center"/>
+</LinearLayout>
