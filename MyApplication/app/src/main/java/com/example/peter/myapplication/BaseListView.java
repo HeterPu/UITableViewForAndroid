@@ -16,12 +16,12 @@ import java.util.ArrayList;
  *             eg.{
  *              setContentView(R.layout.activity_main);
  *              listV = (BaseListView) findViewById(R.id.mListView);
- *              listV.setSourse(this,this);
+ *              listV.setSource(this,this);
  *             }
- *     Second: Inplements DataSoure interface.
+ *     Second: Inplements DataSource interface.
  *              eg.{
- *                implements BaseListView.DataSourse.
- *                override several method in dataSoure.
+ *                implements BaseListView.DataSource.
+ *                override several method in dataSource.
  *                Use ViewLoder to custom your view and get higer proficiency.
  *              }
  *    Third: when your datas are prepared already.call reloadData to refresh UI in ListView.
