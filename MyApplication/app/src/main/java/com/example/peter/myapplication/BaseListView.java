@@ -24,7 +24,7 @@ import java.util.ArrayList;
  *                override several method in dataSource.
  *                Use ViewLoder to custom your view and get higer proficiency.
  *              }
- *    Third: when your datas are prepared already.call reloadData to refresh UI in ListView.
+ *    Third: when your datas are prepared already, call reloadData to refresh UI in ListView.
  *
  *    Good luck , enjoy yourself !!!
  */
