@@ -33,9 +33,9 @@ public class BaseListView extends ListView {
 
 
     /**
-     *  Datasoure is a interface use to load data from activity.For inner use;
+     *  Datasource is a interface use to load data from activity.For inner use;
      */
-    private DataSourse  source;
+    private DataSource  source;
 
     /**
      * The dataArray is applied to access inner datasate;
@@ -44,7 +44,7 @@ public class BaseListView extends ListView {
 
 
     /**
-     * Custom Arrayadapter to bridge data from datasourse.
+     * Custom Arrayadapter to bridge data from datasource.
      */
     private  CustomArrayAdapter adapter;
 
@@ -68,11 +68,11 @@ public class BaseListView extends ListView {
 
 
     /**
-     * Morhod to set Context and datasouse.
+     * Morhod to set Context and datasouce.
      * @param context import context from outside.
      * @param source  a class implements dataSouse interface.
      */
-    public void setSourse( Context context, DataSourse source) {
+    public void setSource( Context context, DataSource source) {
         this.source = source;
         CustomArrayAdapter   arrayAdapter = new CustomArrayAdapter(context,0,dataArray);
         setAdapter(arrayAdapter);
@@ -81,10 +81,10 @@ public class BaseListView extends ListView {
 
 
     /**
-     * When outside datasourse change,you can call this method to notify inner refresh data.
+     * When outside datasource change,you can call this method to notify inner refresh data.
      */
     public void reloadData(){
-        initailizedDataSourse();
+        initailizedDataSource();
     }
 
 
@@ -92,7 +92,7 @@ public class BaseListView extends ListView {
     /**
      * Datasourse interface.
      */
-    public interface DataSourse {
+    public interface DataSource {
 
         /**
          * Fetch number of section.
@@ -173,7 +173,7 @@ public class BaseListView extends ListView {
     /**
      * Initialized dataSoure after call reloadData().
      */
-    private void initailizedDataSourse(){
+    private void initailizedDataSource(){
         dataArray.clear();
         int section = source.numberOfSection();
         for (int i = 0 ; i < section; i++) {

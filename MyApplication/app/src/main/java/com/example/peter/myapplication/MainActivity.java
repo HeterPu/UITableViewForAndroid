@@ -11,7 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class MainActivity extends AppCompatActivity implements BaseListView.DataSourse  {
+public class MainActivity extends AppCompatActivity implements BaseListView.DataSource  {
     BaseListView listV;
     private int row = 30;
 
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements BaseListView.Data
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         listV = (BaseListView) findViewById(R.id.mListView);
-        listV.setSourse(this,this);
+        listV.setSource(this,this);
         listV.reloadData();
         listV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
