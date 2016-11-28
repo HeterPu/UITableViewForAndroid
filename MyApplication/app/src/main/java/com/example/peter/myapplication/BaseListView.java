@@ -18,11 +18,11 @@ import java.util.ArrayList;
  *              listV = (BaseListView) findViewById(R.id.mListView);
  *              listV.setSource(this,this);
  *             }
- *     Second: Inplements DataSource interface.
+ *     Second: Implements DataSource interface.
  *              eg.{
  *                implements BaseListView.DataSource.
  *                override several method in dataSource.
- *                Use ViewLoder to custom your view and get higer proficiency.
+ *                Use ViewLoader to custom your view and get higher proficiency.
  *              }
  *    Third: when your datas are prepared already, call reloadData to refresh UI in ListView.
  *
@@ -38,7 +38,7 @@ public class BaseListView extends ListView {
     private DataSource  source;
 
     /**
-     * The dataArray is applied to access inner datasate;
+     * The dataArray is applied to access inner datastate;
      */
     private  ArrayList<Indexpath> dataArray = new ArrayList<>();
 
@@ -68,7 +68,7 @@ public class BaseListView extends ListView {
 
 
     /**
-     * Morhod to set Context and datasouce.
+     * Method to set Context and datasource.
      * @param context import context from outside.
      * @param source  a class implements dataSouse interface.
      */
@@ -84,7 +84,7 @@ public class BaseListView extends ListView {
      * When outside datasource change,you can call this method to notify inner refresh data.
      */
     public void reloadData(){
-        initailizedDataSource();
+        initDataSource();
     }
 
 
@@ -111,7 +111,7 @@ public class BaseListView extends ListView {
          * Fetch Header's ViewCallBack From Outside.
          * @param section  Section number starts from 0.
          * @param holder Object Holder for reuse.
-         * @return  ATTENTION:Reture null stands for no sectionheader view.
+         * @return  ATTENTION:Return null stands for no sectionheader view.
          */
         ViewCallBack viewForHeader(int section,Object holder);
 
@@ -171,9 +171,9 @@ public class BaseListView extends ListView {
 
 
     /**
-     * Initialized dataSoure after call reloadData().
+     * Initialized dataSource after call reloadData().
      */
-    private void initailizedDataSource(){
+    private void initDataSource(){
         dataArray.clear();
         int section = source.numberOfSection();
         for (int i = 0 ; i < section; i++) {
